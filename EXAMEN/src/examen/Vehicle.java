@@ -2,7 +2,7 @@ package examen;
 
 import java.util.Objects;
 
-class Vehicle implements Comparable<Vehicle>{
+class Vehicle {
     private String matricula;
     private String marca;
     private String model;
@@ -78,22 +78,10 @@ class Vehicle implements Comparable<Vehicle>{
         final Vehicle other = (Vehicle) obj;
         return Objects.equals(this.matricula, other.matricula);
     }
-    
-    @Override
-    public int compareTo(Vehicle v) {
-        if (this.any > v.any) {
-            return 1;
-        } else if (this.any < v.any) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
-
 
     @Override
     public String toString() {
-        return "Vehicle{" + "matricula=" + matricula + ", marca=" + marca + ", model=" + model + ", any=" + any + ", preu=" + preu + '}';
+        return "{" + matricula + ", " + marca + ", " + model + ", " + any + ", " + preu + '}';
     }
     
     

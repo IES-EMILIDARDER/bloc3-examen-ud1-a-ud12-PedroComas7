@@ -22,7 +22,7 @@ public class Main1 {
                 collect(Collectors.toList());
         
         for(Vehicle v : vehiclesO){
-            System.out.println(v.getMarca());
+            System.out.print(v.getMarca());
         }
     }
 }
