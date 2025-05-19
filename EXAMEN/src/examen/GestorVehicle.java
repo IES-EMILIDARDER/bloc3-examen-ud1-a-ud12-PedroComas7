@@ -97,7 +97,11 @@ public class GestorVehicle {
             for (Vehicle v : vehicles) {
                 try {
                     gestorBBDD.executaSQL(conn, "INSERT INTO vehicles (matricula, marca, model, any, preu) VALUES (?,?,?,?,?)",
-                            v.getMatricula(), v.getMarca(), v.getModel(), v.getAny(), v.getPreu());
+                            "4321-JKL", "Ford", "Focus", 2019, 17000);
+                    gestorBBDD.executaSQL(conn, "INSERT INTO vehicles (matricula, marca, model, any, preu) VALUES (?,?,?,?,?)",
+                            "8765-MNO", "Hyundai", "Ioniq 5", 2023, 42000);
+                    gestorBBDD.executaSQL(conn, "INSERT INTO vehicles (matricula, marca, model, any, preu) VALUES (?,?,?,?,?)",
+                            "2109-PQR", "Peugeot", "308", 2016, 14000);
                 } catch (SQLException e) {
                     if (e.getSQLState().equals("23000") && e.getErrorCode() == 1062) // Error per PK, modificar
                     {
