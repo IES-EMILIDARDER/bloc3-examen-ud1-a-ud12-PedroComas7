@@ -15,7 +15,7 @@ public class Main1 {
         );
         
         List<Vehicle> vehiclesO = vehicles.stream()
-                .distinct()
+                .distinct()  // CORRECCIO: avances massa el distinct()
                 .filter(n-> n.getAny() > 2014)
                 .sorted((m1, m2) -> m1.getMarca().
                 compareTo(m2.getMarca())).
